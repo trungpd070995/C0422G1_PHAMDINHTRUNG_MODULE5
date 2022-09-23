@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>EDIT-CUSTOMER</title>
+    <title>CREATE-CONTRACT</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../../vendors/bootstrap/bootstrap.min.css">
@@ -25,12 +25,12 @@
 <body>
 <div class="container">
     <div class="row ">
-        <h1 class="d-flex justify-content-center">
-            CREATE-CUSTOMER
+        <h1 class="d-flex justify-content-center mt-3">
+            THÊM MỚI HỢP ĐỒNG
         </h1>
 
         <div>
-            <form action="/customer/create" method="post" class="form-search">
+            <form action="/contract/create" method="post" class="form-search">
                 <div>
                     <div class="row">
                         <div class="col-3" style="margin-left: auto">
@@ -38,21 +38,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-6">Loại khách</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <select class="form-select" name="">
-                                <option>Diamond</option>
-                                <option>Plantinium</option>
-                                <option>Gold</option>
-                                <option>Silver</option>
-                                <option>Member</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6">Tên khách hàng:</div>
+                        <div class="col-6">Tên Dịch Vụ: </div>
                     </div>
                     <div class="row">
                         <div class="col-12">
@@ -61,7 +47,16 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-6">Ngày sinh:</div>
+                        <div class="col-6">Tên Khách Hàng:</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <input class="form-control" type="text">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">Ngày Thuê:</div>
                     </div>
                     <div class="row">
                         <div class="col-12">
@@ -70,7 +65,16 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-6">Số điện thoại:</div>
+                        <div class="col-6">Ngày Trả Phòng:</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <input class="form-control" type="date">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">Tiền Đặt Cọc:</div>
                     </div>
                     <div class="row">
                         <div class="col-12">
@@ -79,19 +83,7 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-6">Giới tính:</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <select class="form-select" name="">
-                                <option>Nam</option>
-                                <option>Nữ</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-6">Số CMND:</div>
+                        <div class="col-6">Tổng Tiền:</div>
                     </div>
                     <div class="row">
                         <div class="col-12">
@@ -100,16 +92,7 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-6">Email:</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <input class="form-control" type="text">
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-6">Địa chỉ:</div>
+                        <div class="col-6">Dịch Vụ Đi Kèm:</div>
                     </div>
                     <div class="row">
                         <div class="col-12">
