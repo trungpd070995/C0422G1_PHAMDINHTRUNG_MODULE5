@@ -1,0 +1,9 @@
+body {
+  background-image: url("https://haycafe.vn/wp-content/uploads/2022/05/Nen-xanh-duong-pastel.jpg");
+  background-position: revert;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.row {
+  padding-bottom: 10px;
+}
