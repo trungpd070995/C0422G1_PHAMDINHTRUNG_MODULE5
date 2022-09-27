@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
 import {FacilityRoutingModule} from "./facility/facility-routing.module";
+import {ContractModule} from "./contract/contract.module";
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {FacilityRoutingModule} from "./facility/facility-routing.module";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FacilityRoutingModule
+    FacilityRoutingModule,
+    ContractModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

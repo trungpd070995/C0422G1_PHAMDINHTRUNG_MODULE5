@@ -8,10 +8,13 @@ import { FacilityCreateComponent } from './facility-create/facility-create.compo
 
 
 @NgModule({
-  declarations: [FacilityListComponent, FacilityEditComponent, FacilityCreateComponent],
-  imports: [
-    CommonModule,
-    FacilityRoutingModule
-  ]
+    declarations: [FacilityListComponent, FacilityEditComponent, FacilityCreateComponent],
+    exports: [
+        FacilityListComponent
+    ],
+    imports: [
+        CommonModule,
+        FacilityRoutingModule
+    ]
 })
 export class FacilityModule { }
