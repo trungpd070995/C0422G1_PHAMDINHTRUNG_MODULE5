@@ -8,12 +8,14 @@ import { FooterComponent } from './footer/footer.component';
 
 import {FacilityRoutingModule} from "./facility/facility-routing.module";
 import {ContractModule} from "./contract/contract.module";
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
