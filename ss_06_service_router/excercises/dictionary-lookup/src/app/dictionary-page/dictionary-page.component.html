@@ -1,0 +1,20 @@
+<h2 style="color: darkblue">Dictionary Lookup</h2>
+<table class="table table-info">
+  <thead>
+  <tr>
+    <th>No</th>
+    <th>World</th>
+    <th>Detail</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let w of wordList; index as i">
+    <td>{{i + 1}}</td>
+    <td>{{w.word}}</td>
+    <td>
+      <a [routerLink]="['/detail',w.word]">Detail</a>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
