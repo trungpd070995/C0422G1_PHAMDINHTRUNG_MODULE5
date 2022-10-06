@@ -1,0 +1,125 @@
+<div class="container">
+  <div class="row ">
+
+    <h1 class="d-flex justify-content-center mt-3">THÊM MỚI NHÂN VIÊN</h1>
+
+    <div>
+      <form [formGroup]="employeeForm" (ngSubmit)="submitEmployee()" class="form-search">
+        <div>
+          <div class="row">
+            <div class="col-3" style="margin-left: auto">
+              <a [routerLink]="['/employee/list']" class="btn btn-success">
+                <span>Trở lại</span></a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">Tên Nhân Viên:</div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <input formControlName="name" class="form-control" type="text">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">Ngày sinh:</div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <input formControlName="birthday" class="form-control" type="date">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-6">Địa chỉ:</div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <input formControlName="address" class="form-control" type="text">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-6">Số CMND:</div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <input formControlName="idCard" class="form-control" type="text">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-6">Số điện thoại:</div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <input formControlName="phoneNumber" class="form-control" type="text">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-6">Email:</div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <input formControlName="email" class="form-control" type="text">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-6">Lương:</div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <input formControlName="salary" class="form-control" type="number">
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-6">Trình Độ</div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <select formControlName="educationDegree" class="form-select" name="">
+                <option selected value="" disabled>---Trình độ---</option>
+                <option *ngFor="let item of educationDegree" [ngValue]="item">{{item.name}}</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-6">Bộ Phận</div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <select formControlName="division" class="form-select" name="">
+                <option selected value="" disabled>---Bộ Phận---</option>
+                <option *ngFor="let item of division" [ngValue]="item">{{item.name}}</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-6">Vị Trí</div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <select formControlName="position" class="form-select" name="">
+                <option selected value="" disabled>---Vị Trí---</option>
+                <option *ngFor="let item of position" [ngValue]="item">{{item.name}}</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-3">
+              <button type="submit" class="btn btn-success mt-2">Thêm mới</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+

@@ -1,53 +1,38 @@
 <div class="container">
   <div class="row ">
-    <h1 class="d-flex justify-content-center">EDIT-CUSTOMER</h1>
+    <h1 class="d-flex justify-content-center">CHỈNH SỬA KHÁCH HÀNG</h1>
   </div>
   <div>
-    <form action="/customer/edit" method="post" class="form-search">
+    <form *ngIf="customerForm" [formGroup]="customerForm" (ngSubmit)="updateCustomer(id)">
       <div>
         <div class="row">
           <div class="col-3" style="margin-left: auto">
-            <button class="btn-outline-success">Back</button>
+            <a [routerLink]="['/customer/list']" class="btn btn-success">
+              <span>BACK</span></a>
           </div>
         </div>
         <div class="row">
-          <div class="col-6">Loại khách</div>
+          <div class="col-6">Tên khách hàng:</div>
         </div>
         <div class="row">
           <div class="col-12">
-            <select class="form-select" name="">
-              <option>Diamond</option>
-              <option>Plantinium</option>
-              <option>Gold</option>
-              <option>Silver</option>
-              <option>Member</option>
-            </select>
+            <input formControlName= "customerName" class="form-control" type="text">
           </div>
-        </div>
-        <div class="row">
-          <div class="col-6">Tên khách hàng: </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <input class="form-control" type="text">
+          <div class="col-6" *ngIf="customerForm.controls.customerName.hasError('required') && (customerForm.controls.customerName.touched)">
+            Khong duoc bo trong!
           </div>
         </div>
 
         <div class="row">
-          <div class="col-6">Ngày sinh: </div>
+          <div class="col-6">Ngày sinh:</div>
         </div>
         <div class="row">
           <div class="col-12">
-            <input class="form-control" type="date">
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-6">Số điện thoại: </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <input class="form-control" type="text">
+            <input formControlName="customerBirthday" class="form-control" type="date">
+            <div class="mb-4 text-danger"
+                 *ngIf="customerForm.controls.customerBirthday.hasError('required') && customerForm.controls.customerBirthday.touched">
+              *Bạn chưa đủ 18 tuổi hoặc bạn đã nhập ngày sinh không đúng!
+            </div>
           </div>
         </div>
 
@@ -56,7 +41,7 @@
         </div>
         <div class="row">
           <div class="col-12">
-            <select class="form-select" name="">
+            <select formControlName="customerGender" class="form-select" name="">
               <option>Nam</option>
               <option>Nữ</option>
             </select>
@@ -64,38 +49,65 @@
         </div>
 
         <div class="row">
-          <div class="col-6">Số CMND: </div>
+          <div class="col-6">Số CMND:</div>
         </div>
         <div class="row">
           <div class="col-12">
-            <input class="form-control" type="text">
+            <input formControlName="customerIdCard" class="form-control" type="text">
           </div>
         </div>
 
         <div class="row">
-          <div class="col-6">Email: </div>
+          <div class="col-6">Số điện thoại:</div>
         </div>
         <div class="row">
           <div class="col-12">
-            <input class="form-control" type="text">
+            <input formControlName="customerPhone" class="form-control" type="text">
           </div>
         </div>
 
         <div class="row">
-          <div class="col-6">Địa chỉ: </div>
+          <div class="col-6">Email:</div>
         </div>
         <div class="row">
           <div class="col-12">
-            <input class="form-control" type="text">
+            <input formControlName="customerEmail" class="form-control" type="text">
+          </div>
+          <div class="mb-4 text-danger"
+               *ngIf="customerForm.controls.customerEmail.hasError('required') && customerForm.controls.customerEmail.touched">
+            *Email invalidate!
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-6">Địa chỉ:</div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <input formControlName="customerAddress" class="form-control" type="text">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-6">Loại khách</div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <select formControlName="customerType" class="form-select" name="">
+              <option ngValue="" disabled>---Loại Khách Hàng---</option>
+              <option *ngFor="let item of customerTypes" [ngValue]="item.id">{{item.name}}</option>
+            </select>
           </div>
         </div>
 
         <div class="row">
           <div class="col-3">
-            <button type="submit" class="btn-outline-success">Edit</button>
+            <button type="submit" class="btn btn-success" >EDIT</button>
           </div>
         </div>
       </div>
     </form>
   </div>
 </div>
+
+

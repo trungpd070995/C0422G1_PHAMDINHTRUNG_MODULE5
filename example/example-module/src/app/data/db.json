@@ -1,0 +1,92 @@
+{
+  "nhaXe": [
+    {
+      "soXe": "12322",
+      "nhaXe": "Mai Linh",
+      "soDienThoai": "0915111234",
+      "loaiXe": "Giường nằm",
+      "email": "mailinh@gmail.com",
+      "diemDi": {
+        "id": 1,
+        "tenTinh": "Đà Nẵng"
+      },
+      "diemDen": {
+        "id": 7,
+        "tenTinh": "Hà Nội"
+      },
+      "gioDi": "03:40",
+      "gioDen": "10:45",
+      "id": 1
+    },
+    {
+      "soXe": "12345",
+      "nhaXe": "Phuong Trang",
+      "loaiXe": "Giuong nam",
+      "soDienThoai": "0935111456",
+      "email": "keymon.qb73@gmail.com",
+      "diemDi": {
+        "id": 3,
+        "tenTinh": "Quảng Trị"
+      },
+      "diemDen": {
+        "id": 1,
+        "tenTinh": "Đà Nẵng"
+      },
+      "gioDi": "11:07",
+      "gioDen": "13:07",
+      "id": 2
+    }
+  ],
+  "diemDi": [
+    {
+      "id": 1,
+      "tenTinh": "Đà Nẵng"
+    },
+    {
+      "id": 2,
+      "tenTinh": "Quảng Bình"
+    },
+    {
+      "id": 3,
+      "tenTinh": "Quảng Trị"
+    },
+    {
+      "id": 5,
+      "tenTinh": "Huế"
+    },
+    {
+      "id": 6,
+      "tenTinh": "Sài Gòn"
+    },
+    {
+      "id": 7,
+      "tenTinh": "Hà Nội"
+    }
+  ],
+  "diemDen": [
+    {
+      "id": 1,
+      "tenTinh": "Đà Nẵng"
+    },
+    {
+      "id": 2,
+      "tenTinh": "Quảng Bình"
+    },
+    {
+      "id": 3,
+      "tenTinh": "Quảng Trị"
+    },
+    {
+      "id": 5,
+      "tenTinh": "Huế"
+    },
+    {
+      "id": 6,
+      "tenTinh": "Sài Gòn"
+    },
+    {
+      "id": 7,
+      "tenTinh": "Hà Nội"
+    }
+  ]
+}

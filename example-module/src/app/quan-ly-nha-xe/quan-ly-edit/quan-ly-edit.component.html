@@ -1,0 +1,121 @@
+<div class="blog">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="titlepage">
+          <h2 align="center" class="mt-3">CHỈNH SỬA NHÀ XE</h2>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="container mt-4">
+          <div class="row w-50 mx-auto" style="background-color: white">
+            <div class="col-lg-12">
+              <form [formGroup]="nhaXeForm" (ngSubmit)="update(id)">
+
+                <div class="mb-2">
+                  <label for="soXe" class="form-label">Số xe</label>
+                  <input id="soXe" name="soXe" type="text" class="form-control"
+                         formControlName="soXe"/>
+                  <div class="mb-4 text-danger"
+                       *ngIf="nhaXeForm.controls.soXe.hasError('required') && (nhaXeForm.controls.soXe.touched)">
+                    *Số xe không được để trống!
+                  </div>
+                </div>
+
+                <div class="mb-2">
+                  <label for="nhaXe" class="form-label">Nhà xe</label>
+                  <input id="nhaXe" name="nhaXe" type="text" class="form-control"
+                         formControlName="nhaXe"/>
+                  <div class="mb-4 text-danger"
+                       *ngIf="nhaXeForm.controls.nhaXe.hasError('required') && (nhaXeForm.controls.nhaXe.touched)">
+                    *Nhà xe không được để trống!
+                  </div>
+                </div>
+
+                <div class="mb-2">
+                  <label for="loaiXe" class="form-label">Loại xe</label>
+                  <input id="loaiXe" name="loaiXe" type="text" class="form-control"
+                         formControlName="loaiXe"/>
+                  <div class="mb-4 text-danger"
+                       *ngIf="nhaXeForm.controls.loaiXe.hasError('required') && (nhaXeForm.controls.loaiXe.touched)">
+                    *Loại xe không được để trống!
+                  </div>
+                </div>
+
+                <div class="mb-2">
+                  <label for="soDienThoai" class="form-label">Số điện thoại</label>
+                  <input id="soDienThoai" name="soDienThoai" type="text" class="form-control"
+                         formControlName="soDienThoai"/>
+                  <div class="mb-4 text-danger"
+                       *ngIf="nhaXeForm.controls.soDienThoai.hasError('required') && (nhaXeForm.controls.soDienThoai.touched)">
+                    *Số điện thoại xe không được để trống!
+                  </div>
+                </div>
+
+                <div class="mb-2">
+                  <label for="email" class="form-label">Email</label>
+                  <input id="email" name="email" type="text" class="form-control"
+                         formControlName="email"/>
+                  <div class="mb-4 text-danger"
+                       *ngIf="nhaXeForm.controls.email.hasError('required') && (nhaXeForm.controls.email.touched)">
+                    *Số điện thoại xe không được để trống!
+                  </div>
+                </div>
+
+                <div class="mb-2">
+                  <label for="diemDi" class="form-label">Điểm đi</label>
+                  <select id="diemDi" name="diemDi" class="form-select" formControlName="diemDi" [compareWith]="compareWithId">
+                    <option selected value="" disabled>---Choose điểm đi---</option>
+                    <option *ngFor="let i of diemDi" [ngValue]="i">{{i.tenTinh}}</option>
+                  </select>
+                  <div class="mb-4 text-danger"
+                       *ngIf="nhaXeForm.controls.diemDi.hasError('required') && (nhaXeForm.controls.diemDi.touched)">
+                    *Điểm đi không được để trống!
+                  </div>
+                </div>
+
+                <div class="mb-2">
+                  <label for="diemDen" class="form-label">Điểm đến</label>
+                  <select id="diemDen" name="diemDen" class="form-select" formControlName="diemDen" [compareWith]="compareWithId">
+                    <option selected value="" disabled>---Choose điểm đến--</option>
+                    <option *ngFor="let i of diemDi" [ngValue]="i">{{i.tenTinh}}</option>
+                  </select>
+                  <div class="mb-4 text-danger"
+                       *ngIf="nhaXeForm.controls.diemDen.hasError('required') && (nhaXeForm.controls.diemDen.touched)">
+                    *Điểm đến không được để trống!
+                  </div>
+                </div>
+
+                <div class="mb-2">
+                  <label for="gioDi" class="form-label">Giờ đi</label>
+                  <input id="gioDi" name="gioDi" type="time" class="form-control"
+                         formControlName="gioDi"/>
+                  <div class="mb-4 text-danger"
+                       *ngIf="nhaXeForm.controls.gioDi.hasError('required') && (nhaXeForm.controls.gioDi.touched)">
+                    *Giờ đi không được để trống!
+                  </div>
+                </div>
+
+                <div class="mb-2">
+                  <label for="gioDen" class="form-label">Giờ đến</label>
+                  <input id="gioDen" name="gioDen" type="time" class="form-control"
+                         formControlName="gioDen"/>
+                  <div class="mb-4 text-danger"
+                       *ngIf="nhaXeForm.controls.gioDen.hasError('required') && (nhaXeForm.controls.gioDen.touched)">
+                    *Giờ đến không được để trống!
+                  </div>
+                </div>
+                <br>
+                <div style="text-align: center">
+                  <a routerLink="/quanly/list"><input class="btn btn-success mx-2" type="button" value="Quay lại"></a>
+                  <button type="submit" class="btn btn-success" [disabled]="!nhaXeForm.valid">Lưu</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
